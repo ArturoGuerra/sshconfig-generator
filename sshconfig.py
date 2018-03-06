@@ -19,5 +19,5 @@ def ssh_genlist():
 
 for s in ssh_genlist():
     print(f"Server Name: {s}")
-    cmd = s + ':.ssh/config'
-    subprocess.call(['scp', configFile, f'{cmd}'])
+    subprocess.call(['scp', configFile, f'{s}:.ssh/config'])
+    print('--------------------------------------------------')
